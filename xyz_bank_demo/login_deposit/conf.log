@@ -1,0 +1,16 @@
+[10:22:04] I/launcher - Running 1 instances of WebDriver
+[10:22:04] I/hosted - Using the selenium server at http://localhost:4444/wd/hub
+Started
+null
+presence
+Harry Potter
+Assertion Passed: Expected Harry Potter for the Xpath/html/body/div/div/div[2]/div/div[1]/strong/span contain  Harry Potter . :Assertion Passed
+Assertion Passed: Expected Deposit Successful for the Xpath/html/body/div/div/div[2]/div/div[4]/div/span contain Deposit Successful. :Assertion Passed
+[32m.[0m
+
+
+1 spec, 0 failures
+Finished in 21.759 seconds
+
+[10:22:34] I/launcher - 0 instance(s) of WebDriver still running
+[10:22:34] I/launcher - chrome #01 passed
