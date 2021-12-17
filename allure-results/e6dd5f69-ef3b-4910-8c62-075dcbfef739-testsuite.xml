@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1639644396792' stop='1639644420154'>
+    <name>uitap</name>
+    <title>uitap</title>
+    <test-cases>
+        <test-case start='1639644396793' status='passed' stop='1639644420153'>
+            <name>case12</name>
+            <title>case12</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot1' source='06d8894d-9c11-40c7-88e0-cca9072ea483-attachment.png' type='image/png' size='37908'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

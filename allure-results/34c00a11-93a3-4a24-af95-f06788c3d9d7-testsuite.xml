@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1639640627915' stop='1639640645039'>
+    <name>xyzbank</name>
+    <title>xyzbank</title>
+    <test-cases>
+        <test-case start='1639640627916' status='passed' stop='1639640645038'>
+            <name>allure5</name>
+            <title>allure5</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot1' source='235abdc5-bcf4-4d1e-b14f-4d09e7a10e82-attachment.png' type='image/png' size='19964'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
