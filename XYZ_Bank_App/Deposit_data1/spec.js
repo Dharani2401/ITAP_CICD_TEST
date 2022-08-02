@@ -6,6 +6,7 @@
               const Get_Attribute = new Map();
               describe('XYZ_Bank_App', function() {
                     it('Deposit_data1', function() {
+                        console.log('Application_name : XYZ_Bank_App, Scenario_name : Deposit_data1');
                         browser.ignoreSynchronization =true;
                         browser.driver.manage().window().maximize();
                         browser.get("https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login");
