@@ -23,7 +23,7 @@
 			}));
 	//Getting screenshots  
 		var fs = require('fs-extra');
-		fs.emptyDir(`D:\\Recorded_Scenarios\\XYZ_Bank_App\\Deposit\\screenshots`, function (err) {
+		fs.emptyDir(`XYZ_Bank_App\\Deposit\\screenshots`, function (err) {
 				 console.log(err);
 			 });
 			 jasmine.getEnv().addReporter({
@@ -48,7 +48,7 @@
 					reportTitle: `Test Report forXYZ_Bank_App-Deposit`,
 					outputPath: 'XYZ_Bank_App\\Deposit',
 					outputFilename: 'ProtractorTestReport',
-					//screenshotPath: `XYZ_Bank_App\\Deposit\\screenshots`,
+					screenshotPath: `XYZ_Bank_App\\Deposit\\screenshots`,
 					testBrowser: browserName,
 					modifiedSuiteName: false,
 					//screenshotsOnlyOnFailure: true,
