@@ -19,18 +19,18 @@
 			jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
 			   consolidateAll: true,
 			   filePrefix: 'guitest-xmloutput',
-			   savePath: 'D:\\Recorded_Scenarios\\XYZ_Bank_App\\Deposit_data1'
+			   savePath: 'XYZ_Bank_App\\Deposit_data1'
 			}));
 	//Getting screenshots  
 		var fs = require('fs-extra');
-		fs.emptyDir(`D:\\Recorded_Scenarios\\XYZ_Bank_App\\Deposit_data1\\screenshots`, function (err) {
+		fs.emptyDir(`XYZ_Bank_App\\Deposit_data1\\screenshots`, function (err) {
 				 console.log(err);
 			 });
 			 jasmine.getEnv().addReporter({
 				 specDone: function(result) {
 					 if (result.status == 'failed') {
                          browser.takeScreenshot().then(function (png) {
-                        var stream = fs.createWriteStream(`D:\\Recorded_Scenarios\\XYZ_Bank_App\\Deposit_data1\\screenshots\\`+ result.fullName+ '.png');
+                        var stream = fs.createWriteStream(`XYZ_Bank_App\\Deposit_data1\\screenshots\\`+ result.fullName+ '.png');
                         stream.write(new Buffer.from(png, 'base64'));
                              stream.end();
                          });
@@ -46,15 +46,15 @@
 				var HTMLReport = require('protractor-html-reporter-2');
 				testConfig = {
 					reportTitle: `Test Report forXYZ_Bank_App-Deposit_data1`,
-					outputPath: 'D:\\Recorded_Scenarios\\XYZ_Bank_App\\Deposit_data1',
+					outputPath: 'XYZ_Bank_App\\Deposit_data1',
 					outputFilename: 'ProtractorTestReport',
-					//screenshotPath: `D:\\Recorded_Scenarios\\XYZ_Bank_App\\Deposit_data1\\screenshots`,
+					//screenshotPath: `XYZ_Bank_App\\Deposit_data1\\screenshots`,
 					testBrowser: browserName,
 					modifiedSuiteName: false,
 					//screenshotsOnlyOnFailure: true,
 					testPlatform: platform
 				};
-				new HTMLReport().from(`D:\\Recorded_Scenarios\\XYZ_Bank_App\\Deposit_data1\\guitest-xmloutput.xml`, testConfig);
+				new HTMLReport().from(`XYZ_Bank_App\\Deposit_data1\\guitest-xmloutput.xml`, testConfig);
 			
 		},
        getPageTimeout: 20000,
