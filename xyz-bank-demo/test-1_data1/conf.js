@@ -26,7 +26,7 @@
 			jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
 			   consolidateAll: true,
 			   filePrefix: 'guitest-xmloutput',
-			   savePath: 'D:\\Recorded_Scenarios\\xyz-bank-demo\\test-1_data1'
+			   savePath: 'xyz-bank-demo\\test-1_data1'
 			}));
 	//Getting screenshots  
 		var fs = require('fs-extra');
@@ -39,7 +39,7 @@
 						 browser.getCapabilities().then(function (caps) {
 							 var browserName = caps.get('browserName');
 							 browser.takeScreenshot().then(function (png) {
-							var stream = fs.createWriteStream(`D:\\Recorded_Scenarios\\xyz-bank-demo\\test-1_data1\\screenshots`+ browserName + '-' + result.fullName+ '.png');
+							var stream = fs.createWriteStream(`xyz-bank-demo\\test-1_data1\\screenshots`+ browserName + '-' + result.fullName+ '.png');
 							stream.write(new Buffer.from(png, 'base64'));
 								 stream.end();
 							 });
@@ -58,16 +58,16 @@
 				var HTMLReport = require('protractor-html-reporter-2');
 				testConfig = {
 					reportTitle: 'Protractor Test Execution Report',
-					outputPath: 'D:\\Recorded_Scenarios\\xyz-bank-demo\\test-1_data1',
+					outputPath: 'xyz-bank-demo\\test-1_data1',
 					outputFilename: 'ProtractorTestReport',
-					screenshotPath: `D:\\Recorded_Scenarios\\xyz-bank-demo\\test-1_data1\\screenshots`,
+					screenshotPath: `xyz-bank-demo\\test-1_data1\\screenshots`,
 					testBrowser: browserName,
 					browserVersion: browserVersion,
 					modifiedSuiteName: false,
 					screenshotsOnlyOnFailure: true,
 					testPlatform: platform
 				};
-				new HTMLReport().from(`D:\\Recorded_Scenarios\\xyz-bank-demo\\test-1_data1\\guitest-xmloutput.xml`, testConfig);
+				new HTMLReport().from(`xyz-bank-demo\\test-1_data1\\guitest-xmloutput.xml`, testConfig);
 			});
 		},
        getPageTimeout: 20000,
