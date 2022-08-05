@@ -26,7 +26,7 @@
 			jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
 			   consolidateAll: true,
 			   filePrefix: 'guitest-xmloutput',
-			   savePath: 'D:\\Recorded_Scenarios\\xyz_demo\\login-dep_data0'
+			   savePath: 'xyz_demo\\login-dep_data0'
 			}));
 	//Getting screenshots  
 		var fs = require('fs-extra');
@@ -39,7 +39,7 @@
 						 browser.getCapabilities().then(function (caps) {
 							 var browserName = caps.get('browserName');
 							 browser.takeScreenshot().then(function (png) {
-							var stream = fs.createWriteStream(`D:\\Recorded_Scenarios\\xyz_demo\\login-dep_data0\\screenshots`+ browserName + '-' + result.fullName+ '.png');
+							var stream = fs.createWriteStream(`xyz_demo\\login-dep_data0\\screenshots`+ browserName + '-' + result.fullName+ '.png');
 							stream.write(new Buffer.from(png, 'base64'));
 								 stream.end();
 							 });
@@ -60,14 +60,14 @@
 					reportTitle: 'Protractor Test Execution Report',
 					outputPath: 'D:\\Recorded_Scenarios\\xyz_demo\\login-dep_data0',
 					outputFilename: 'ProtractorTestReport',
-					screenshotPath: `D:\\Recorded_Scenarios\\xyz_demo\\login-dep_data0\\screenshots`,
+					screenshotPath: `xyz_demo\\login-dep_data0\\screenshots`,
 					testBrowser: browserName,
 					browserVersion: browserVersion,
 					modifiedSuiteName: false,
 					screenshotsOnlyOnFailure: true,
 					testPlatform: platform
 				};
-				new HTMLReport().from(`D:\\Recorded_Scenarios\\xyz_demo\\login-dep_data0\\guitest-xmloutput.xml`, testConfig);
+				new HTMLReport().from(`xyz_demo\\login-dep_data0\\guitest-xmloutput.xml`, testConfig);
 			});
 		},
        getPageTimeout: 20000,
