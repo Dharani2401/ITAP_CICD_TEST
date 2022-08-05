@@ -19,7 +19,7 @@
 			jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
 			   consolidateAll: true,
 			   filePrefix: 'guitest-xmloutput',
-			   savePath: 'D:\\Recorded_Scenarios\\XYZ_Bank_App\\Deposit'
+			   savePath: 'XYZ_Bank_App\\Deposit'
 			}));
 	//Getting screenshots  
 		var fs = require('fs-extra');
@@ -30,7 +30,7 @@
 				 specDone: function(result) {
 					 if (result.status == 'failed') {
                          browser.takeScreenshot().then(function (png) {
-                        var stream = fs.createWriteStream(`D:\\Recorded_Scenarios\\XYZ_Bank_App\\Deposit\\screenshots\\`+ result.fullName+ '.png');
+                        var stream = fs.createWriteStream(`XYZ_Bank_App\\Deposit\\screenshots\\`+ result.fullName+ '.png');
                         stream.write(new Buffer.from(png, 'base64'));
                              stream.end();
                          });
@@ -46,15 +46,15 @@
 				var HTMLReport = require('protractor-html-reporter-2');
 				testConfig = {
 					reportTitle: `Test Report forXYZ_Bank_App-Deposit`,
-					outputPath: 'D:\\Recorded_Scenarios\\XYZ_Bank_App\\Deposit',
+					outputPath: 'XYZ_Bank_App\\Deposit',
 					outputFilename: 'ProtractorTestReport',
-					//screenshotPath: `D:\\Recorded_Scenarios\\XYZ_Bank_App\\Deposit\\screenshots`,
+					//screenshotPath: `XYZ_Bank_App\\Deposit\\screenshots`,
 					testBrowser: browserName,
 					modifiedSuiteName: false,
 					//screenshotsOnlyOnFailure: true,
 					testPlatform: platform
 				};
-				new HTMLReport().from(`D:\\Recorded_Scenarios\\XYZ_Bank_App\\Deposit\\guitest-xmloutput.xml`, testConfig);
+				new HTMLReport().from(`XYZ_Bank_App\\Deposit\\guitest-xmloutput.xml`, testConfig);
 			
 		},
        getPageTimeout: 20000,
