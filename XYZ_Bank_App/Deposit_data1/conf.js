@@ -23,7 +23,7 @@
 			}));
 	//Getting screenshots  
 		var fs = require('fs-extra');
-		fs.emptyDir(`screenshots\`, function (err) {
+		fs.emptyDir(`screenshots/`, function (err) {
 				 console.log(err);
 			 });
 			 jasmine.getEnv().addReporter({
