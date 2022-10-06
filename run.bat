@@ -4,6 +4,7 @@ IF EXIST %%G (
 echo  Test Case Started %%G
 protractor %%G
 echo Test Case Ended %%G
+echo Date:%date% Time:%time%
 )
 )
 
