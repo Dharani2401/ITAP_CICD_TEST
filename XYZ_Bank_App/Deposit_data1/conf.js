@@ -23,7 +23,7 @@
 			}));
 	//Getting screenshots  
 		var fs = require('fs-extra');
-		fs.emptyDir(`XYZ_Bank_App\\Deposit_data1\\screenshots`, function (err) {
+		fs.emptyDir(`screenshots\`, function (err) {
 				 console.log(err);
 			 });
 			 jasmine.getEnv().addReporter({
