@@ -5,7 +5,7 @@
               const Get_Text = new Map();
               const Get_Attribute = new Map();
               describe('XYZ_Bank_App', function() {
-                    it('"XYZ_Bank_App\Deposit"', function() {
+                    it('Deposit', function() {
                                     console.log('Application_name : XYZ_Bank_App, Scenario_name : "XYZ_Bank_App\Deposit"');
                         browser.ignoreSynchronization =true;
                         browser.driver.manage().window().maximize();
